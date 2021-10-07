@@ -1,0 +1,6 @@
+
+// starts the test runner
+npm test
+
+// compiles to static files for production
+npm run build
