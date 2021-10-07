@@ -1,0 +1,18 @@
+.Header {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: larger;
+    width: 80%;
+    background-color: #339CFF;
+    margin: 0 auto;
+    border-radius: 35px;
+  }
+
+.header-container{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.navItem {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
