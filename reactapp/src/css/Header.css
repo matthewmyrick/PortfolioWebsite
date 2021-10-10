@@ -2,8 +2,12 @@
     font-family: 'Ubuntu', sans-serif;
     font-size: larger;
     width: 80%;
-    background-color: #339CFF;
     margin: 0 auto;
+    /* background-color: #339CFF; */
+    background-color: white;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
     border-radius: 35px;
   }
 
@@ -15,4 +19,21 @@
 .navItem {
     margin-left: 50px;
     margin-right: 50px;
+    float: center;
   }
+
+
+.navLabel{
+    /* color: #fff; */
+    color: black;
+}
+
+.navLabel:hover{
+    font-weight: bold;
+}
+
+#basic-navbar-nav{
+    padding-top: 8px;
+    /* color: #fff; */
+    color: black;
+}

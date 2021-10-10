@@ -1,0 +1,67 @@
+.Portfolio{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: larger;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 5%;
+}
+
+.portfolio-header{
+    text-align: center;
+    width: 100%;
+}
+
+.divider{
+    background-color: black;
+    color: black;
+    width: 100%;
+}
+
+.data-analysis-header{
+    text-align: center;
+    width: 100%;
+}
+
+.CardsContainer{
+    border-style: solid;
+    border-width: thin;
+    border-color: lightgray;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-content: space-between;
+    grid-gap: 10px;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+     -ms-animation: fadein 2s; /* Internet Explorer */
+      -o-animation: fadein 2s; /* Opera < 12.1 */
+         animation: fadein 2s;
+}
+
+.portfolioCard{
+    padding: 11%;
+    display: inline-block;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

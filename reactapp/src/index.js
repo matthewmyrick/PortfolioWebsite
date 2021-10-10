@@ -11,7 +11,6 @@ import Contact from './components/contact'
 
 
 ReactDOM.render( 
-  <React.StrictMode>
       <Router>
       <Header/>
       <Switch>
@@ -21,6 +20,6 @@ ReactDOM.render(
         <Route path="/contact" component={Contact} />
       </Switch>
     </Router>
-  </React.StrictMode>,
+,
   document.getElementById('root')
 );
