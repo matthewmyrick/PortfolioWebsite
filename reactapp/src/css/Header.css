@@ -1,8 +1,12 @@
-.Header {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: larger;
+.header-container{
     width: 80%;
     margin: 0 auto;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: larger;
+}
+
+.Header {
+    width: 100%;
     /* background-color: #339CFF; */
     background-color: white;
     border-style: solid;
@@ -37,3 +41,29 @@
     /* color: #fff; */
     color: black;
 }
+
+.top-container{
+    display: flex;
+    padding-top: 2%;
+  }
+  
+  .logo-links-container, .signature-container{
+    width: 50%;
+  }
+  
+  .signature-container{
+    text-align: right;
+  }
+  
+  #name-aboutme, #contact-info-aboutme{
+    padding-right: 3%;
+  }
+  
+  #name-aboutme{
+    font-family: 'Birthstone', cursive;
+    font-size: 40px;
+  }
+
+  .logo-icon{
+    margin-left: 2%;
+  }

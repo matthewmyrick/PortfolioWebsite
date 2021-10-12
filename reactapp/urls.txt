@@ -1,37 +1,29 @@
 === DATA SCIENCE/ANALYTICS ===
 COVID - 19 Analysis
 url: https://github.com/matthewmyrick/DataAnalyticsPortfolio/blob/main/Covid19/Covid19_Data_Analysis.ipynb
-trello: https://trello.com/b/OoLOE4V0/covid-19-data-analyis
 
 Car Statistics Analysis
 url: /
-trello: 
 
 NBA Stats Analysis
 url: /
-trello: 
 
 Immigration Statistics
 url: /
-trello: 
 
 
 === FINANCIAL MODELING/ANALYTICS ===
 Investment Analysis / Modeler Excel Add-In
 url: https://github.com/matthewmyrick/StockValuationExcelAddIn
-trello: 
 
 Investment Analysis Flask-ChartJs Dashboard
 url: https://stockanalysisdashboard.herokuapp.com/
-trello: 
 
 Loan Amortization Web Application
 url: https://loanamortization20211004033721.azurewebsites.net/
-trello: 
 
 International Finance Desktop Application
 url: https://github.com/matthewmyrick/InternationalFinanceApp
-trello: 
 
 
 === DATABASE MANAGEMENT APPLICATIONS ===
@@ -40,8 +32,9 @@ trello:
 === KPI DASHBOARDS ===
 PowerBI Dashboard
 url: https://github.com/matthewmyrick/KPIDashboard/tree/main/PowerBi
-trello: 
 
 Google Data Studio KPI Dashboard
 url: https://sites.google.com/view/kpidashboard/home
-trello: 
+
+
+=== FUN APPLICATIONS ===

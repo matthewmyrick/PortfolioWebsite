@@ -5,6 +5,7 @@ import {Card, Button} from 'react-bootstrap';
 
 // data analytics images imports
 import covid19 from '../images/portfolio/Covid19Analysis.jpg';
+import collisionStats from '../images/portfolio/CollisionStats.jpg';
 
 // financial softwares images imports
 import stockVtso from '../images/portfolio/StockValuationVSTO.jpg';
@@ -77,8 +78,8 @@ const portfolio = () => {
                     {card(
                         "Car Statistics Analysis COMING SOON",
                         "This project uses Google Colab to develop analytics and statistical predictions of car accidents in San Francisco Bay Area.",
-                        "/",
-
+                        "https://github.com/matthewmyrick/DataAnalyticsPortfolio/blob/main/US%20Collision/Collision_Data_Analysis.ipynb",
+                        collisionStats
                     )}
                     {card(
                         "NBA Stats Analysis COMING SOON", 
