@@ -60,8 +60,9 @@
   }
   
   #name-aboutme{
-    font-family: 'Birthstone', cursive;
-    font-size: 40px;
+    /* font-family: 'Birthstone', cursive;
+    font-size: 40px; */
+    font-weight: bold;
   }
 
   .logo-icon{

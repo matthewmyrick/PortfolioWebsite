@@ -5,6 +5,11 @@
   width: 80%;
   margin: 0 auto;
   padding-bottom: 5%;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+   -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+       animation: fadein 2s;
 }
 
 .About-logo {
@@ -50,6 +55,7 @@
 
 .aboutme-content-container{
   width: 50%;
+  padding-bottom: 10%;
   /* border: 1px solid black; */
 }
 
@@ -58,6 +64,7 @@
   width: 75%;
   display:block;
   margin: auto;
+  text-indent: 50px
 }
 
 .aboutme-content-container b, hr{
@@ -68,6 +75,18 @@
   color: black;
 }
 
+.aboutme-content-container table{
+  width: 75%;
+  display: block;
+  margin: auto;
+
+  /* border: 1px solid black; */
+}
+
+.aboutme-content-container table tr td{
+  font-size: 16px;
+}
+
 
 .img-container-aboutme{
   width: 50%;
@@ -75,23 +94,54 @@
 }
 
 .img-container-aboutme img{
-  width: 55%;
+  width: 20%;
+  height: 50%;
   border-radius: 15px;
   display:block;
-  margin: 40%, 15%, 15%;
+  position:absolute;
 }
 
-/* .carrousel-container{
-  background-color: #979797;
+.img-container-aboutme.right img{
+  margin-left: 5%;
 }
 
-.carrousel-container{
-  margin: 0 auto;
-  padding-top: 2%;
-  width: 95%;
-  border-radius: 15px;
-} */
+.img-container-aboutme.left img{
+  text-align: right;
+  margin-left: 15%;
+  vertical-align: middle;
+}
 
+.experiences-tabs-container{
+  width: 75%;
+  margin: auto;
+}
+
+.experiences-tabs-container Button{
+  margin-right: 3%;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
 
 
 

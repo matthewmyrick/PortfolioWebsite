@@ -51,8 +51,12 @@ const header = () => {
             </Navbar>
             <div className="top-container">
                 <div className="logo-links-container">
-                    <img className="logo-icon" src={githubLogo} alt="Github" width="50" height="50"/>
-                    <img className="logo-icon" src={linkedInLogo} alt="LinkedIn" width="50" height="50"/>
+                    <a href="https://github.com/matthewmyrick" target="_blank">
+                        <img className="logo-icon" src={githubLogo} alt="Github" width="50" height="50"/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mattmyrick/" target="_blank">
+                        <img className="logo-icon" src={linkedInLogo} alt="LinkedIn" width="50" height="50"/>
+                    </a>
                 </div>
                 <div className="signature-container">
                     <b id="name-aboutme">Matthew J Myrick</b>
