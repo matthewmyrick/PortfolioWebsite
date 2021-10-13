@@ -84,7 +84,7 @@
 }
 
 .aboutme-content-container table tr td{
-  font-size: 16px;
+  font-size: 80%;
 }
 
 
@@ -94,20 +94,18 @@
 }
 
 .img-container-aboutme img{
-  width: 20%;
-  height: 50%;
+  width: 55%;
   border-radius: 15px;
   display:block;
-  position:absolute;
 }
 
 .img-container-aboutme.right img{
-  margin-left: 5%;
+  margin-left: 12%;
 }
 
 .img-container-aboutme.left img{
   text-align: right;
-  margin-left: 15%;
+  margin-left: 33%;
   vertical-align: middle;
 }
 
