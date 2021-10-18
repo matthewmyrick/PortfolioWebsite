@@ -1,4 +1,4 @@
-import {VERIFY_EMAIL_API, EMAILJS_USER_ID} from './keys.js'
+import {VERIFY_EMAIL_API} from './keys.js'
 
 function VERIFY_EMAIL_URL(email){
     return (
@@ -9,8 +9,4 @@ function VERIFY_EMAIL_URL(email){
     )
 }
 
-function EMAILJS_URL(email){
-    
-}
-
-export {VERIFY_EMAIL_URL, EMAILJS_USER_ID}
+export {VERIFY_EMAIL_URL}

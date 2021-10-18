@@ -1,8 +1,7 @@
 import React, { createRef } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Button, InputGroup, FormControl, Alert} from 'react-bootstrap'
-import emailjs from 'emailjs-com';
-import {validateEmail} from './requests/req.js'
+import {validateEmail, sendEmail} from './requests/req.js'
 
 
 // import css 
@@ -10,17 +9,15 @@ import '../css/Contact.css';
 
 
 const contact = () => {
-
+    let name = createRef();
     let email = createRef(); 
     let subject = createRef();
     let message = createRef();
 
-    let sendEmail = async () => {
+    let sendAutomatedEmail = async () => {
         var response = await validateEmail(email.current.value)
         if (response.status_description.includes("OK") || response.status_description.includes("UNKNOWN")){
-          console.log(email.current.value);
-          console.log(subject.current.value); 
-          console.log(message.current.value);
+          await sendEmail(name.current.value, email.current.value, subject.current.value, message.current.value)
           alert("Message Sent.")
         }else{
           alert("Email does not exist, please recheck email.")
@@ -28,9 +25,15 @@ const contact = () => {
     };
     return (
         <div className="Contact">
+          <p>Name</p>
+          <InputGroup>
+            <FormControl 
+              type="text" ref={name} placeholder="name"
+            />
+          </InputGroup>
+          <br/>
           <p>Email</p>
           <InputGroup>
-            {/* <InputGroup.Text>With textarea</InputGroup.Text> */}
             <FormControl 
               type="email" ref={email} placeholder="email"
             />
@@ -38,7 +41,6 @@ const contact = () => {
           <br/>
           <p>Subject</p>
           <InputGroup>
-            {/* <InputGroup.Text>With textarea</InputGroup.Text> */}
             <FormControl 
               type="text" ref={subject} placeholder="subject"
             />
@@ -46,7 +48,6 @@ const contact = () => {
           <br/>
           <p>Message</p>
           <InputGroup>
-            {/* <InputGroup.Text>With textarea</InputGroup.Text> */}
             <FormControl 
               as="textarea" aria-label="With textarea" rows={7} ref={message}
               placeholder="message"
@@ -54,7 +55,7 @@ const contact = () => {
           </InputGroup>
           <br/>
           <Button 
-            onClick={sendEmail}
+            onClick={sendAutomatedEmail}
             variant="outline-dark"
           >
             Send Email
