@@ -28,9 +28,10 @@
     border-color: lightgray;
     border-radius: 15px;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
     align-content: space-between;
     grid-gap: 10px;
+    justify-items: center;
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
      -ms-animation: fadein 2s; /* Internet Explorer */
@@ -39,8 +40,8 @@
 }
 
 .portfolioCard{
-    padding: 11%;
-    display: inline-block;
+    padding-top: 8%;
+    padding-bottom: 8%;
 }
 
 @keyframes fadein {

@@ -1,11 +1,16 @@
 import React from 'react'
-import {Navbar, Nav} from 'react-bootstrap'
+import {Navbar, Nav, Button} from 'react-bootstrap'
 import {LinkContainer} from 'react-router-bootstrap'
 import '../css/Header.css'
 
 // import image paths
 import githubLogo from '../images/aboutMe/githubLogo.png';
 import linkedInLogo from '../images/aboutMe/linkedInLogo.png';
+import resume from '../images/aboutMe/Matthew Myrick - Resume.pdf';
+
+function GoToLink(link, page){
+    window.open(link, page);
+}
 
 const header = () => {
     return (
@@ -24,14 +29,7 @@ const header = () => {
                                 </h5>
                             </Nav.Link>
                         </LinkContainer>
-                        <LinkContainer to="/experience" className="navItem">
-                            <Nav.Link className="navLabel">
-                                <h5 className="navLabel">
-                                    Experience/Resume
-                                </h5>
 
-                            </Nav.Link>
-                        </LinkContainer>
                         <LinkContainer to="/portfolio" className="navItem">
                             <Nav.Link className="navLabel">
                                 <h5 className="navLabel">
@@ -44,6 +42,14 @@ const header = () => {
                                 <h5 className="navLabel">
                                     Contact
                                 </h5>
+                            </Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to="#" onClick={() => GoToLink(resume, "_blank")} className="navItem">
+                            <Nav.Link className="navLabel">
+                                <h5 className="navLabel">
+                                    Resume
+                                </h5>
+
                             </Nav.Link>
                         </LinkContainer>
                     </Nav>

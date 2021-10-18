@@ -1,51 +1,65 @@
-import React from 'react'
+import React, { createRef } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import {Badge, Carousel, Card, Button} from 'react-bootstrap'
+import {Button, InputGroup, FormControl, Alert} from 'react-bootstrap'
+import emailjs from 'emailjs-com';
+import {validateEmail} from './requests/req.js'
+
+
+// import css 
+import '../css/Contact.css';
+
 
 const contact = () => {
+
+    let email = createRef(); 
+    let subject = createRef();
+    let message = createRef();
+
+    let sendEmail = async () => {
+        var response = await validateEmail(email.current.value)
+        if (response.status_description.includes("OK") || response.status_description.includes("UNKNOWN")){
+          console.log(email.current.value);
+          console.log(subject.current.value); 
+          console.log(message.current.value);
+          alert("Message Sent.")
+        }else{
+          alert("Email does not exist, please recheck email.")
+        }
+    };
     return (
-        <div className="Home">
-        <h1>
-          Example heading <Badge bg="secondary">New</Badge> 
-        </h1>
-      <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=First slide&bg=373940"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Second slide&bg=282c34"
-            alt="Second slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&bg=20232a"
-            alt="Third slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-    </div>
+        <div className="Contact">
+          <p>Email</p>
+          <InputGroup>
+            {/* <InputGroup.Text>With textarea</InputGroup.Text> */}
+            <FormControl 
+              type="email" ref={email} placeholder="email"
+            />
+          </InputGroup>
+          <br/>
+          <p>Subject</p>
+          <InputGroup>
+            {/* <InputGroup.Text>With textarea</InputGroup.Text> */}
+            <FormControl 
+              type="text" ref={subject} placeholder="subject"
+            />
+          </InputGroup>
+          <br/>
+          <p>Message</p>
+          <InputGroup>
+            {/* <InputGroup.Text>With textarea</InputGroup.Text> */}
+            <FormControl 
+              as="textarea" aria-label="With textarea" rows={7} ref={message}
+              placeholder="message"
+            />
+          </InputGroup>
+          <br/>
+          <Button 
+            onClick={sendEmail}
+            variant="outline-dark"
+          >
+            Send Email
+          </Button>
+      </div>
     
     )
 }

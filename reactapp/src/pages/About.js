@@ -1,7 +1,7 @@
 // library and component imports
-import React, { Component }  from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Card, Button, Tabs, Tab} from 'react-bootstrap';
+import {Button, Tabs, Tab} from 'react-bootstrap';
 
 // import css 
 import '../css/About.css';
@@ -55,17 +55,9 @@ function About() {
               <tr>
                 <td>
                   <ul>
-                    <li>VSTO .NET Core</li>
-                    <li>.NET Core MVC</li>
-                    <li>NumPy</li>
-                    <li>Pandas</li>
-                  </ul>  
-                </td>
-                <td>
-                  <ul>
+                    <li>.NET Core/Framework</li>
                     <li>Matplotlib/Seaborn</li>
-                    <li>ChartsJs</li>
-                    <li>Dash - Plotly</li>
+                    <li>NumPy/Pandas</li>
                     <li>TensorFlow/Pytorch</li>
                   </ul>  
                 </td>

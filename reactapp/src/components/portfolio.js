@@ -32,8 +32,7 @@ function card(title, description, link, imagePath){
                             {description}
                         </Card.Text>
                         <Card.Text><i>
-                            Frameworks/Libraries used: 
-
+                            Frameworks/Libraries used:
                         </i></Card.Text>
                         <Button variant="outline-dark" onClick={
                             () => GoToLink(link)
