@@ -14,19 +14,21 @@ async function validateEmail(email) {
     let url = VERIFY_EMAIL_URL(email);
     return fetch(url)
     .then((response) => { 
-        return response.json().then((data) => {
-            if (data.credits == 0){
-                if (valid == true){
-                    let data = {
-                        status_description: "OK"
+        return response.json()
+            .then((data) => {
+                console.clear()
+                if (data.credits == 0){
+                    if (valid == true){
+                        let data = {
+                            status_description: "OK"
+                        }
+                        return data
                     }
-                    return data
                 }
-            }
-            return data;
-        }).catch((err) => {
-            return err
-        }) 
+                return data;
+            }).catch((err) => {
+                return err
+            }) 
     });
     
 }

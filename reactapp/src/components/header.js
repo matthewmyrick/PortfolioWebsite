@@ -49,7 +49,6 @@ const header = () => {
                                 <h5 className="navLabel">
                                     Resume
                                 </h5>
-
                             </Nav.Link>
                         </LinkContainer>
                     </Nav>

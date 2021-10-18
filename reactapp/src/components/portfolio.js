@@ -6,6 +6,7 @@ import {Card, Button} from 'react-bootstrap';
 // data analytics images imports
 import covid19 from '../images/portfolio/Covid19Analysis.jpg';
 import collisionStats from '../images/portfolio/CollisionStats.jpg';
+import nbaDash from '../images/portfolio/NbaDashboard.jpg';
 
 // financial softwares images imports
 import stockVtso from '../images/portfolio/StockValuationVSTO.jpg';
@@ -17,7 +18,7 @@ import internationalFinance from '../images/portfolio/InternationalFinanceApp.jp
 import datastudio from '../images/portfolio/KpiGoogleDataStudio.jpg';
 import powerBI from '../images/portfolio/PowerBi.png';
 
-function card(title, description, link, imagePath){
+function card(title, description, frameworks, link, imagePath){
     var projectComplete = "Go to Project"
     if (title.includes("COMING SOON")){
         projectComplete = projectComplete + " Progress"
@@ -33,6 +34,11 @@ function card(title, description, link, imagePath){
                         </Card.Text>
                         <Card.Text><i>
                             Frameworks/Libraries used:
+                            <ul>
+                                {frameworks.map(function(name, index){
+                                        return <li key={ index }>{name}</li>;
+                                    })}
+                            </ul> 
                         </i></Card.Text>
                         <Button variant="outline-dark" onClick={
                             () => GoToLink(link)
@@ -50,6 +56,7 @@ const portfolio = () => {
         <div className="Portfolio">
             <div className="portfolio-header">
                 <h1>Portfolio & Projects</h1>
+                <i>All Projects on are my Github as well</i>
             </div>
             <hr className="divider"/>
             <br/>
@@ -71,24 +78,36 @@ const portfolio = () => {
                     {card(
                         "Covid-19 Analysis", 
                         "This project uses Python libraries such as Pandas, NumPy, and scikit-learn to understand and analyze the Covid-19 Pandemic.",
+                        [
+                            "MatplotLib", "requests", "SkLearn", "Pandas", "NumPy", "Seaborn"
+                        ],
                         "https://github.com/matthewmyrick/DataAnalyticsPortfolio/blob/main/Covid19/Covid19_Data_Analysis.ipynb",
                         covid19
                         )}
                     {card(
-                        "Car Statistics Analysis COMING SOON",
-                        "This project uses Google Colab to develop analytics and statistical predictions of car accidents in San Francisco Bay Area.",
+                        "Car Statistics Analysis",
+                        "This project uses Google Colab to develop analytics and statistical predictions of car accidents in the United States",
+                        [
+                            "MatplotLib", "Pandas", "SkLearn"
+                        ],
                         "https://github.com/matthewmyrick/DataAnalyticsPortfolio/blob/main/US%20Collision/Collision_Data_Analysis.ipynb",
                         collisionStats
                     )}
                     {card(
                         "NBA Stats Analysis COMING SOON", 
-                        "This project uses Python libraries such as Pandas, NumPy, and scikit-learn to understand and analyze the statistical leaders in the National Basketball Association (NBA).",
-                        "/",
-                    
+                        "This project uses Python libraries such as Pandas and NumPy to understand and analyze the statistical leaders in the National Basketball Association (NBA).",
+                        [
+                            "Dash", "nba-api", "requests", "Pandas", "NumPy"
+                        ],
+                        "https://github.com/matthewmyrick/NbaDashboard",
+                        nbaDash
                         )}
                     {card(
                         "Immigration Statistics COMING SOON", 
                         "This project uses R to understand and visualize immigration data from the past year.",
+                        [
+                            ""
+                        ],
                         "/",
                         
                         )}
@@ -112,24 +131,36 @@ const portfolio = () => {
                     {card(
                         "Investment Analysis / Modeler Excel Add-In", 
                         "This Project uses the C# VSTO framework to create an Excel add in software that allows users develop faster financial models and valuations on publicly listed companies",
+                        [
+                            "VSTO", "HttpRequest", "WPF", "FMP"
+                        ],
                         "https://github.com/matthewmyrick/StockValuationExcelAddIn",
                         stockVtso
                         )}
                     {card(
                         "Investment Analysis Flask-ChartJs Dashboard",
                         "This dashboard focuses on statistical analysis of correlation coefficients and reducing portfolio risk.",
+                        [
+                            "Flask", "ChartJs", "NumPy", "Pandas", "FMP", "requests"
+                        ],
                         "https://stockanalysisdashboard.herokuapp.com/",
                         investmentDash
                     )}
                     {card(
                         "Loan Amortization Web Application", 
                         "This project uses the MVC .NET Core framework to demonstrate period payments on amortized loans.",
+                        [
+                            ".NET Core MVC", "F#", "C#"
+                        ],
                         "https://loanamortization20211004033721.azurewebsites.net/",
                         loanAmortization
                         )}
                     {card(
                         "International Finance Desktop Application", 
                         "This project uses the Tkinter Python library to develop an application I used for my international finance class, which assisted me with problems like Interest Rate Parity's, Cross Rates, and Triangular Arbitrage.",
+                        [
+                            "Tkinter", "Python"
+                        ],
                         "https://github.com/matthewmyrick/InternationalFinanceApp",
                         internationalFinance
                         )}
@@ -161,27 +192,21 @@ const portfolio = () => {
                     {card(
                         "PowerBI Dashboard", 
                         "This Dashboard is run on PowerBI and analyzes customer order data using segmentation strategies and high level statistical analysis.",
+                        [
+                            "Excel", "PowerBI", "Microsoft 365"
+                        ],
                         "https://github.com/matthewmyrick/KPIDashboard/tree/main/PowerBi",
                         powerBI
                         )}
                     {card(
                         "Google Data Studio KPI Dashboard",
                         "This project uses mock customer data to develop 3 different types of Dashboards: Revenue, Expenses, and Profits. After the Google Data Studio Dashboards were finished, they were published to a Google site. ",
+                        [
+                            "Google Sheets", "Google Data Studio", "Google Sites"
+                        ],
                         "https://sites.google.com/view/kpidashboard/home",
                         datastudio
                     )}
-                    {card(
-                        "Covid-19 Analysis", 
-                        "This project uses Python libraries such as Pandas, NumPy, and scikit-learn to understand and analyze the Covid-19 Pandemic",
-                        "https://github.com/matthewmyrick/DataAnalyticsPortfolio/blob/main/Covid19/Covid19_Data_Analysis.ipynb",
-                        covid19
-                        )}
-                    {card(
-                        "Covid-19 Analysis", 
-                        "This project uses Python libraries such as Pandas, NumPy, and scikit-learn to understand and analyze the Covid-19 Pandemic",
-                        "https://github.com/matthewmyrick/DataAnalyticsPortfolio/blob/main/Covid19/Covid19_Data_Analysis.ipynb",
-                        datastudio
-                        )}
                 </div>
             </div>
 
